@@ -29,4 +29,4 @@ Source of Truth, Database, and Skill Factory for all AI coding agent skills.
 After creating or modifying skills, run `register_skills.sh` to update global symlinks.
 
 ## Private Skills
-`x-bookmarks/` is a personal utility skill stored at `_planning/skills/x-bookmarks/` (outside the split prefix — not published to the public skills-library repo).
+`x-bookmarks/` is a personal utility skill stored in `_planning/x-bookmarks/` (stripped by CI before publishing to the public skills-library repo).
