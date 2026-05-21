@@ -22,11 +22,15 @@ Source of Truth, Database, and Skill Factory for all AI coding agent skills.
 - `docs/SKILL_REGISTRATION.md` — Deployment, discovery, activation
 
 ## Discovery Locations
+- **Shared global**: `~/.agents/skills/<name>/SKILL.md`
+- **Codex global**: `~/.codex/skills/<name>/SKILL.md`
+- **OpenCode global**: `~/.config/opencode/skills/<name>/SKILL.md`
 - **Project**: `.agents/skills/<name>/SKILL.md` (auto-discovered)
-- **Global**: `~/.config/opencode/skills/<name>/SKILL.md`
 
 ## Registration
-After creating or modifying skills, run `register_skills.sh` to update global symlinks.
+After creating or modifying skills, run `register_skills.sh` to refresh skills through `npx skills@latest`.
+
+Use `register_skills.sh github` when you want an install from `Skeptomenos/skills-library` that can later be updated with `npx skills@latest update -g -y`.
 
 ## Private Skills
 `x-bookmarks/` is a personal utility skill stored in `_planning/x-bookmarks/` (stripped by CI before publishing to the public skills-library repo).

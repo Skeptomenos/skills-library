@@ -2,6 +2,8 @@
 import os
 import re
 
+import yaml
+
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKILLS_DIR = os.path.join(REPO_ROOT, "skills")
 README_PATH = os.path.join(REPO_ROOT, "README.md")
@@ -23,22 +25,19 @@ def parse_skill(skill_dir):
         return None
 
     frontmatter = match.group(1)
-
-    name_match = re.search(r"^name:\s*(.+)$", frontmatter, re.MULTILINE)
-    desc_match = re.search(r"^description:\s*(.+)$", frontmatter, re.MULTILINE)
-
-    if not name_match:
+    try:
+        data = yaml.safe_load(frontmatter) or {}
+    except Exception:
         return None
 
-    name = name_match.group(1).strip().strip('"').strip("'")
-    desc = (
-        desc_match.group(1).strip().strip('"').strip("'")
-        if desc_match
-        else "No description provided."
-    )
+    name = data.get("name")
+    desc = data.get("description") or "No description provided."
+    if not name:
+        return None
 
-    if desc.startswith("|") or desc.startswith(">"):
+    if not isinstance(desc, str):
         desc = "Detailed description (see skill file)"
+    desc = re.sub(r"\s+", " ", desc).strip()
 
     return {"name": name, "description": desc, "path": f"skills/{skill_dir}/SKILL.md"}
 

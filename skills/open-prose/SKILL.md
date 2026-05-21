@@ -1,7 +1,6 @@
 ---
 name: open-prose
-description: |
-Activate when: running .prose files, mentioning OpenProse, or orchestrating
+description: Use when running .prose files, mentioning OpenProse, or orchestrating AI agents from a prose program.
 see-also: 
 - prose.md: Execution semantics, how to run programs
 - docs.md: Full syntax grammar, validation rules, compilation

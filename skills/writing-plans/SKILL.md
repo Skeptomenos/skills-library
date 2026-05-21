@@ -1,3 +1,8 @@
+---
+name: writing-plans
+description: Write and maintain living implementation plans for multi-step work. Use when work has 3+ steps, touches multiple files or subsystems, or may span sessions.
+---
+
 # Skill: writing-plans
 
 Write and maintain living implementation plans for multi-step work. Plans are self-contained documents that any agent can pick up and execute without prior context.
