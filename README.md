@@ -20,6 +20,7 @@ Skill writing is **TDD for process documentation**:
 | Skill | Description |
 |-------|-------------|
 | [`agent-browser`](skills/agent-browser/SKILL.md) | Automates browser interactions for web testing, form filling, screenshots, and data extraction. Use when the user needs to navigate websites, interact with web pages, fill forms, take screenshots, test web applications, or extract information from web pages. |
+| [`agent-compatibility-audit`](skills/agent-compatibility-audit/SKILL.md) | Audit whether a repository is easy for coding agents to start, validate, and trust. Use when checking agent readiness, startup docs, validation loops, or whether a project is AFK-agent friendly. |
 | [`agents-md`](skills/agents-md/SKILL.md) | Audit and improve AGENTS.md files using progressive disclosure principles. Enforces high-leverage discipline (No Slop, Always Works) and lean structure. |
 | [`auto-skill`](skills/auto-skill/SKILL.md) | Autonomous skill extraction system that captures reusable knowledge from work sessions. Triggers: (1) /auto-skill command to review session learnings, (2) "save this as a skill" or "extract a skill from this", (3) "what did we learn?", (4) After any task involving non-obvious debugging, workarounds, or trial-and-error discovery. Creates new OpenCode skills when valuable, reusable knowledge is identified. |
 | [`bird-cli`](skills/bird-cli/SKILL.md) | Use when reading X/Twitter posts, tweets, threads, or x.com links. Also for searching Twitter content, trending topics, bookmarks, mentions, and user profiles via CLI. |
@@ -52,6 +53,7 @@ Skill writing is **TDD for process documentation**:
 | [`slack-pulse`](skills/slack-pulse/SKILL.md) | Scan Slack for mentions, DMs, and high-value channel activity requiring attention. |
 | [`slack-write`](skills/slack-write/SKILL.md) | Use when writing Slack messages, team announcements, or channel posts. Ensures correct mrkdwn formatting instead of Markdown. |
 | [`thought-router`](skills/thought-router/SKILL.md) | Route unstructured thoughts, brain dumps, and quick captures to their correct home in the knowledge base. |
+| [`verify-this`](skills/verify-this/SKILL.md) | Verify a claim with fresh local evidence. Use when asked to prove a fix, confirm behavior, compare before/after results, or produce a VERIFIED, NOT VERIFIED, or INCONCLUSIVE verdict. |
 | [`writing-plans`](skills/writing-plans/SKILL.md) | Write and maintain living implementation plans for multi-step work. Use when work has 3+ steps, touches multiple files or subsystems, or may span sessions. |
 <!-- SKILLS_LIST_END -->
 
