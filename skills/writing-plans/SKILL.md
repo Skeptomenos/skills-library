@@ -1,6 +1,11 @@
 ---
 name: writing-plans
 description: Write and maintain living implementation plans for multi-step work. Use when work has 3+ steps, touches multiple files or subsystems, or may span sessions.
+author: David Helmus
+version: 0.2.0
+source:
+  type: self
+  name: ai-dev
 ---
 
 # Skill: writing-plans
@@ -56,9 +61,15 @@ picked this path. Link to any prior art or reference material.
 Concrete, ordered steps. Each step names exact files, functions, and commands.
 Use checkboxes. Mark steps done as you complete them.
 
-- [x] (YYYY-MM-DD HH:MMZ) Completed step — brief outcome
+- [x] (YYYY-MM-DD HH:MMZ) Completed step — brief outcome. Evidence: `<command>` → <observed result>
 - [ ] Next step to do
+  Assumption: <unconfirmed belief this step rests on, if any>
+  Verify: <command that exposes the assumption if false>
 - [ ] Future step
+- [ ] FINAL: independent verification — spawn a fresh-context sub-agent (or new session) that did not write the code to re-derive every `[x]` claim as VERIFIED / DISPUTED / UNVERIFIABLE HERE and re-run the validation gate. Disputed claims re-enter Steps as open work. Protocol: `self-correction-loop` skill, `references/verify-plan-prompt.md`.
+
+Every plan ends with the FINAL independent-verification step. It may not be
+removed, and it may not be performed by the agent that implemented the steps.
 
 Split partially completed steps into "done" and "remaining" rather than
 leaving a half-done checkbox.
@@ -116,6 +127,8 @@ or note them here for later triage.
 
 6. **Archive, don't delete.** When a plan is complete or superseded, leave it in place. Start a new plan file rather than overwriting.
 
+7. **Checkboxes carry evidence.** A step may only be flipped to `[x]` together with an evidence line (command + observed result). Steps resting on unconfirmed beliefs get `Assumption:`/`Verify:` lines before implementation starts. The authoritative wording of the evidence rule lives in the `self-correction-loop` skill; reference it, don't restate it.
+
 ## Git Workflow Integration
 
 Plans do not dictate git workflow. Follow the repo's `git-workflow` skill for branching, committing, and PRs. The plan records which branch and Linear issue it's associated with, but the git skill controls how those work.
@@ -129,3 +142,6 @@ To execute a plan:
 3. Work through Steps in order, updating checkboxes and Progress as you go.
 4. When blocked, log the blocker in Progress and stop.
 5. When done, fill in Validation results and update Follow-ups.
+6. Close the plan only after the FINAL independent-verification step has run and reported no DISPUTED claims (or its disputes have been resolved as new steps).
+
+If the project runs an implementation loop (single validation gate, independent verification), execute steps through the `self-correction-loop` skill. This skill defines the plan document; that skill defines how steps are implemented, validated, and verified.
