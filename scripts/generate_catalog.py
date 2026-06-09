@@ -65,10 +65,16 @@ def update_readme():
 
     skills = []
     if os.path.exists(SKILLS_DIR):
-        for item in os.listdir(SKILLS_DIR):
-            if item.startswith(".") or item.startswith("_"):
+        for root, dirs, files in os.walk(SKILLS_DIR):
+            dirs[:] = [
+                d for d in dirs if not d.startswith(".") and not d.startswith("_")
+            ]
+            if "SKILL.md" not in files:
                 continue
-            skill_data = parse_skill(item)
+            skill_dir = os.path.relpath(root, SKILLS_DIR)
+            if skill_dir == ".":
+                continue
+            skill_data = parse_skill(skill_dir)
             if skill_data:
                 skills.append(skill_data)
 
