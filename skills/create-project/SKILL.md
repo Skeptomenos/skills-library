@@ -127,10 +127,10 @@ See skill `update-index` for the detailed protocol.
 
 After the directory and required files are created:
 
-- **TypeScript:** Read `_infra/dev-handbook/rules/rules_ts.md`
-- **Python:** Read `_infra/dev-handbook/rules/rules_python.md`
+- **TypeScript:** Load the `ts-standards` skill (`_infra/skills/skills/dev-standards/ts/SKILL.md`)
+- **Python:** Load the `python-standards` skill (`_infra/skills/skills/dev-standards/python/SKILL.md`)
 - **Swift:** Read project-specific rules (Drawer, Murmeln have their own)
-- **Terraform:** Read `_infra/dev-handbook/rules/devops.md`
+- **Terraform:** Load the `devops-standards` skill (`_infra/skills/skills/dev-standards/devops/SKILL.md`)
 
 Do not create build config files in this skill — those are handled by tech-specific standards.
 
