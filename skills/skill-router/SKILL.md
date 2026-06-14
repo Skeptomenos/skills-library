@@ -1,6 +1,25 @@
 ---
 name: skill-router
 description: Search the central Skill Catalog MCP server before complex, unfamiliar, multi-step, high-risk, or domain-specific work. Use read_skill directly when the user names a skill.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "find relevant skill"
+  - "local guidance"
+  - "complex work"
+  - "multi-step work"
+  - "high-risk work"
+  - "domain-specific work"
+when_to_use:
+  - "A specialized skill may exist but is not already loaded."
+  - "The work is complex, unfamiliar, multi-step, high-risk, or domain-specific."
+  - "The user names a skill or asks for local operating guidance."
+when_not_to_use:
+  - "The request is a trivial one-shot answer or obvious shell command."
+  - "The active repository instructions already fully cover the work."
 ---
 
 # Skill Router

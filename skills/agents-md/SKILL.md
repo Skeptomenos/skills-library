@@ -1,6 +1,24 @@
 ---
 name: agents-md
 description: Audit and improve AGENTS.md files using progressive disclosure principles. Enforces high-leverage discipline (No Slop, Always Works) and lean structure.
+author: David Helmus
+version: 2.0.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "audit AGENTS.md"
+  - "improve AGENTS.md"
+  - "progressive disclosure"
+  - "shrink root instructions"
+  - "instruction budget"
+when_to_use:
+  - "Auditing or improving an existing AGENTS.md file for leverage and brevity."
+  - "Moving bloated instructions into docs while preserving standing orders."
+  - "Checking progressive disclosure, No Slop, Always Works, and plan discipline."
+when_not_to_use:
+  - "Creating a new ai-dev AGENTS.md from conventions; use create-agents-md."
+  - "Finding repo files or project locations; use repo-navigation."
 license: MIT
 compatibility: opencode
 ---

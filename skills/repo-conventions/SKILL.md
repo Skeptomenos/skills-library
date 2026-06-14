@@ -1,6 +1,25 @@
 ---
 name: repo-conventions
 description: Naming conventions, file placement, lifecycle states, branch naming, and organizational rules for the ai-dev monorepo. Use when asked "where should I put", "how do I name", "what's the convention", or any organizational question. Does NOT cover project creation steps (load create-project) or navigation (load repo-navigation).
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "where should I put"
+  - "how do I name"
+  - "file placement"
+  - "lifecycle state"
+  - "branch naming"
+  - "repo convention"
+when_to_use:
+  - "Choosing names, locations, lifecycle states, or branch scopes in ai-dev."
+  - "Deciding whether content belongs in _infra, agents, devtools, apps, research, or work."
+  - "Checking split-publishing and project organization conventions."
+when_not_to_use:
+  - "Finding existing files or projects; use repo-navigation."
+  - "Scaffolding a new project; use create-project."
 ---
 
 ## Naming

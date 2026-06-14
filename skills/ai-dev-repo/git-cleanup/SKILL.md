@@ -1,12 +1,25 @@
 ---
 name: ai-dev-repo-git-cleanup
 description: Use when cleaning ai-dev branches, triaging stale pull requests, protecting dirty main state, archiving side-project work, or reducing branch sprawl in the ai-dev monorepo.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
   - "git cleanup"
   - "branch cleanup"
   - "stale PR"
   - "archive side project branches"
   - "clean ai-dev branches"
+  - "messy git branch"
+  - "dirty main"
+when_to_use:
+  - "Cleaning ai-dev branch sprawl, stale PRs, dirty main state, or archived side-project work."
+  - "Triage requires patch-equivalence checks and protection of active worktrees."
+when_not_to_use:
+  - "Ordinary feature branching, commits, and PRs; use git-workflow."
+  - "Git cleanup outside the ai-dev monorepo."
 license: MIT
 compatibility: opencode
 ---

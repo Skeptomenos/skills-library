@@ -1,6 +1,26 @@
 ---
 name: create-agents-md
 description: How to write AGENTS.md files for the ai-dev monorepo. Covers size targets, required fields, what goes in vs out, templates for each level. Use when creating a new AGENTS.md, reviewing an existing one, or asking about AGENTS.md conventions. Does NOT create projects (load create-project) or update indexes (load update-index).
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "create AGENTS.md"
+  - "update AGENTS.md"
+  - "instructions file"
+  - "project instructions"
+  - "agent instructions"
+  - "AGENTS.md conventions"
+when_to_use:
+  - "Creating a new AGENTS.md file in ai-dev."
+  - "Updating an existing AGENTS.md for project or directory rules."
+  - "Deciding what belongs in AGENTS.md versus README or docs."
+  - "Checking size targets, identity fields, and templates."
+when_not_to_use:
+  - "Creating a new project directory; use create-project first."
+  - "Updating index.md files; use update-index."
 ---
 
 ## Design Principles

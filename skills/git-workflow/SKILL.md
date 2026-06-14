@@ -1,6 +1,27 @@
 ---
 name: git-workflow
 description: Git branching, commits, PRs, scope enforcement, multi-session safety, Alfred auto-review, and split publishing for the ai-dev monorepo. Use when creating branches, committing, pushing, creating PRs, or when working alongside other agents/sessions. Bridges with linear-workflow via `linear issue start` and `linear issue pr`. Does NOT cover Linear ticket lifecycle (load linear-workflow) or project creation (load create-project).
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "git workflow"
+  - "create branch"
+  - "commit changes"
+  - "open PR"
+  - "pull request"
+  - "Alfred review"
+  - "split publishing"
+when_to_use:
+  - "Creating or switching branches in the ai-dev monorepo."
+  - "Staging, committing, pushing, or opening a pull request."
+  - "Coordinating multi-session Git work or checking existing PR feedback."
+  - "Handling split-published project constraints."
+when_not_to_use:
+  - "Only managing Linear issue state; use linear-workflow."
+  - "Only creating a new project; use create-project."
 ---
 
 ## The Golden Path

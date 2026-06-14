@@ -1,6 +1,28 @@
 ---
 name: agent-browser
 description: Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to "open a website", "fill out a form", "click a button", "take a screenshot", "scrape data from a page", "test this web app", "login to a site", "automate browser actions", or any task requiring programmatic web interaction.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "browser automation"
+  - "local web app"
+  - "test web app"
+  - "take screenshot"
+  - "fill form"
+  - "click button"
+  - "scrape page"
+  - "e2e browser test"
+when_to_use:
+  - "Interacting with a website or local web application from the terminal."
+  - "Navigating, clicking, filling forms, selecting options, or pressing keys."
+  - "Taking screenshots, PDFs, snapshots, or visual diffs."
+  - "Running browser-based QA or end-to-end checks."
+when_not_to_use:
+  - "Controlling the Codex in-app browser directly; use the Browser plugin."
+  - "A simple HTTP fetch or API call is enough."
 allowed-tools: Bash(npx agent-browser:*), Bash(agent-browser:*)
 ---
 

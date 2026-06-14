@@ -1,6 +1,25 @@
 ---
 name: repo-navigation
 description: How to navigate the ai-dev monorepo, find projects, discover what exists, or understand where things are located. Use when asked "where is", "find the", "what projects exist", "show me", or any navigation question about the repo. Does NOT cover conventions or placement decisions (load repo-conventions).
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "where is"
+  - "find project"
+  - "what projects exist"
+  - "show repo structure"
+  - "navigate ai-dev"
+  - "locate planning"
+when_to_use:
+  - "Finding an existing project, directory, plan, rule, or document in ai-dev."
+  - "Discovering what exists in a category or the whole monorepo."
+  - "Understanding where something is located before changing it."
+when_not_to_use:
+  - "Deciding where a new file or project should go; use repo-conventions or create-project."
+  - "Creating a project or updating catalogs."
 ---
 
 ## Three-Layer Navigation

@@ -6,6 +6,21 @@ version: 0.2.0
 source:
   type: self
   name: ai-dev
+triggers:
+  - "multi-step implementation plan"
+  - "risky change plan"
+  - "living plan"
+  - "implementation handoff"
+  - "continue later"
+  - "validation workflow"
+when_to_use:
+  - "Work has three or more distinct steps."
+  - "Work touches multiple files, subsystems, or repositories."
+  - "Another agent may need to continue the work later."
+  - "A risky change needs a self-contained plan, validation gate, and handoff context."
+when_not_to_use:
+  - "The task is a quick one-shot answer or single-file fix."
+  - "The user only wants execution of an existing plan; use self-correction-loop for that."
 ---
 
 # Skill: writing-plans
