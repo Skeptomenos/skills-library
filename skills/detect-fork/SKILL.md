@@ -1,16 +1,48 @@
 ---
 name: detect-fork
-description: |
+description: >
   Semantic search across OpenCode sessions to find relevant prior context.
-  Use when: (1) Starting work that resembles past implementations, (2) User mentions something 
-  was "done before" or asks to "continue where we left off", (3) Complex feature that would 
-  benefit from prior context, (4) Cross-project pattern discovery. Searches QMD's session 
-  index and returns ranked results. Default: read and learn from prior sessions in the current
+
+  Use when: (1) Starting work that resembles past implementations, (2) User
+  mentions something
+
+  was "done before" or asks to "continue where we left off", (3) Complex feature
+  that would
+
+  benefit from prior context, (4) Cross-project pattern discovery. Searches
+  QMD's session
+
+  index and returns ranked results. Default: read and learn from prior sessions
+  in the current
+
   session. Fork only when explicitly requested.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - find prior session
+  - detect fork
+  - done before
+  - continue where we left off
+  - session discovery
+when_to_use:
+  - Starting work that resembles prior implementations or debugging sessions.
+  - >-
+    The user asks to continue earlier work or find where something was done
+    before.
+  - Cross-project learning could reduce duplicated investigation.
+when_not_to_use:
+  - The task is clearly new and local context is enough.
+  - >-
+    The user explicitly wants a fresh implementation without prior-session
+    search.
+  - Repository navigation or project placement is the real need.
 license: MIT
 compatibility: opencode
-created: 2025-01-21
-updated: 2026-03-22
+created: 2025-01-21T00:00:00.000Z
+updated: 2026-03-22T00:00:00.000Z
 ---
 
 # Session Discovery: Find and Learn from Prior Work

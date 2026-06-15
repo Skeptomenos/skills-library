@@ -1,14 +1,22 @@
 ---
 name: security-standards
-description: Security standards — edge input validation, auth/authorization patterns, BOLA checks, secrets handling, PII redaction, OWASP web headers. Use when handling user input, authentication, secrets, or reviewing security.
+description: >-
+  Security standards — edge input validation, auth/authorization patterns, BOLA
+  checks, secrets handling, PII redaction, OWASP web headers. Use when handling
+  user input, authentication, secrets, or reviewing security.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "user input"
-  - "authentication"
-  - "secrets"
-  - "security review"
+  - user input
+  - authentication
+  - secrets
+  - security review
 when_to_use:
-  - Handling external input, auth flows, or secrets
-  - Reviewing code for injection, BOLA, or data leakage
+  - 'Handling external input, auth flows, or secrets'
+  - 'Reviewing code for injection, BOLA, or data leakage'
   - Setting security headers
 when_not_to_use:
   - SQL injection specifics already covered when loading sql-standards

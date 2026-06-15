@@ -1,6 +1,22 @@
 ---
 name: playbooks-fetch
-description: Use when fetching web content as markdown, especially for client-side rendered (SPA) pages where WebFetch fails or returns incomplete content.
+description: >-
+  Use when fetching web content as markdown, especially for client-side rendered
+  (SPA) pages where WebFetch fails or returns incomplete content.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - playbooks fetch
+  - fetch SPA markdown
+  - WebFetch incomplete
+  - rendered markdown from URL
+when_not_to_use:
+  - The page is static and ordinary WebFetch works.
+  - 'The task requires browser interaction, forms, or screenshots.'
+  - The content is local repository documentation.
 license: MIT
 compatibility: opencode
 ---

@@ -1,14 +1,33 @@
 ---
 name: thought-router
-description: Route unstructured thoughts, brain dumps, and quick captures to their correct home in the knowledge base.
+description: >-
+  Route unstructured thoughts, brain dumps, and quick captures to their correct
+  home in the knowledge base.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "dump:"
-  - "brain dump"
-  - "quick thought"
-  - "capture this"
-  - "route this"
-created: 2026-01-09
-updated: 2026-01-10
+  - 'dump:'
+  - brain dump
+  - quick thought
+  - capture this
+  - route this
+when_to_use:
+  - >-
+    Routing brain dumps, quick captures, or unstructured thoughts into the
+    knowledge base.
+  - The user asks to capture or route mixed work/life/coding thoughts.
+  - A note needs decomposition into atomic items before persistence.
+when_not_to_use:
+  - 'The task is code routing, HTTP routing, or architecture routing.'
+  - 'The user needs a polished email, Slack message, or PRD.'
+  - >-
+    The information already has an obvious destination and no decomposition is
+    needed.
+created: 2026-01-09T00:00:00.000Z
+updated: 2026-01-10T00:00:00.000Z
 ---
 
 <!--

@@ -1,6 +1,24 @@
 ---
 name: handover
 description: Pushes strategic context from root to a project capsule.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - handover
+  - push context to project
+  - project capsule
+  - strategic context transfer
+when_to_use:
+  - A big-picture decision or thought needs to be pushed into a project capsule.
+  - The user wants context transferred without switching sessions.
+  - A project CONTEXT.md should receive a concise handover entry.
+when_not_to_use:
+  - The request is a Git branch or PR handoff.
+  - The user wants a full project creation workflow.
+  - The information belongs in a general knowledge capture note instead.
 ---
 
 # Handover Skill

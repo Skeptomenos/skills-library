@@ -1,15 +1,37 @@
 ---
 name: move-session
-description: |
-  Migrate OpenCode sessions from one project directory path to another in the OpenCode SQLite
-  database. Use when a project folder has been moved or renamed (e.g. workspace/ → domain/),
-  and you want past sessions to appear under the new path in the session picker. Always backs
-  up the database before writing. Does NOT create projects, rename files, or move Git branches
+description: >
+  Migrate OpenCode sessions from one project directory path to another in the
+  OpenCode SQLite
+
+  database. Use when a project folder has been moved or renamed (e.g. workspace/
+  → domain/),
+
+  and you want past sessions to appear under the new path in the session picker.
+  Always backs
+
+  up the database before writing. Does NOT create projects, rename files, or
+  move Git branches
+
   (load github-workflow or move-project for those).
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - move OpenCode session
+  - relocate session
+  - opencode move-session
+  - session migration
+when_not_to_use:
+  - Moving project files or Git branches.
+  - Archiving knowledge-base notes.
+  - The session is already in the correct location.
 license: MIT
 compatibility: opencode
-created: 2026-06-11
-updated: 2026-06-11
+created: 2026-06-11T00:00:00.000Z
+updated: 2026-06-11T00:00:00.000Z
 ---
 
 # move-session — Migrate OpenCode Sessions to a New Path

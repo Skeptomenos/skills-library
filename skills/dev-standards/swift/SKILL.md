@@ -1,10 +1,18 @@
 ---
 name: swift-standards
-description: Swift & SwiftUI coding standards — deprecated API replacements, SwiftUI architecture, accessibility, type safety, hallucination watch. Use when writing or reviewing Swift or SwiftUI code.
+description: >-
+  Swift & SwiftUI coding standards — deprecated API replacements, SwiftUI
+  architecture, accessibility, type safety, hallucination watch. Use when
+  writing or reviewing Swift or SwiftUI code.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "writing Swift"
-  - "SwiftUI view"
-  - "iOS app code"
+  - writing Swift
+  - SwiftUI view
+  - iOS app code
 when_to_use:
   - Writing or modifying Swift/SwiftUI code
   - Reviewing Swift code for deprecated APIs or accessibility

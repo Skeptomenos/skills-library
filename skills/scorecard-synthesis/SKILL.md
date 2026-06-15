@@ -1,6 +1,19 @@
 ---
 name: scorecard-synthesis
-description: Synthesize hiring scorecards from interview transcripts. Analyzes candidate responses against role criteria and generates structured evaluation with evidence.
+description: >-
+  Synthesize hiring scorecards from interview transcripts. Analyzes candidate
+  responses against role criteria and generates structured evaluation with
+  evidence.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - scorecard synthesis
+  - synthesize scorecards
+  - combine evaluations
+  - ranking synthesis
 ---
 
 # Scorecard Synthesis

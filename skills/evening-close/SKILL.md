@@ -1,6 +1,26 @@
 ---
 name: evening-close
-description: Summarize the day, extract incomplete tasks into tomorrow's overflow, and persist daily learnings to the Knowledge Base.
+description: >-
+  Summarize the day, extract incomplete tasks into tomorrow's overflow, and
+  persist daily learnings to the Knowledge Base.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - evening close
+  - end of day summary
+  - daily wrap-up
+  - tomorrow overflow
+when_to_use:
+  - 'Closing the day by summarizing completed work, blockers, and decisions.'
+  - Moving incomplete tasks into tomorrow's overflow.
+  - Persisting daily learnings into the knowledge base.
+when_not_to_use:
+  - Starting the day or generating a morning briefing.
+  - Processing one meeting note in depth.
+  - Creating engineering handoff notes for a code branch.
 license: MIT
 compatibility: opencode
 ---

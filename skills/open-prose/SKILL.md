@@ -1,14 +1,33 @@
 ---
 name: open-prose
-description: Use when running .prose files, mentioning OpenProse, or orchestrating AI agents from a prose program.
-see-also: 
-- prose.md: Execution semantics, how to run programs
-- docs.md: Full syntax grammar, validation rules, compilation
-triggers: 
-- pattern: /prose-run
+description: >-
+  Use when running .prose files, mentioning OpenProse, or orchestrating AI
+  agents from a prose program.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - OpenProse
+  - run .prose
+  - prose program
+  - prose-run
+  - orchestrate agents from prose
+when_to_use:
+  - Running a `.prose` file or OpenProse program.
+  - 'The user mentions OpenProse, prose-run, or prose-based agent orchestration.'
+  - A reusable AI-session workflow is encoded as Prose.
+when_not_to_use:
+  - The request is ordinary prose writing or copy editing.
+  - 'The user wants a normal shell script, Markdown plan, or code implementation.'
+  - 'No OpenProse file, syntax, or runtime is involved.'
+see-also:
+  - prose.md: 'Execution semantics, how to run programs'
+  - docs.md: 'Full syntax grammar, validation rules, compilation'
 action: run
-created: 2026-01-09
-updated: 2026-01-09
+created: 2026-01-09T00:00:00.000Z
+updated: 2026-01-09T00:00:00.000Z
 ---
 
 # OpenProse Skill

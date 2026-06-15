@@ -1,6 +1,30 @@
 ---
 name: skill-generator
-description: Use when creating a new skill, editing an existing skill, or when asked to document a reusable process or technique
+description: >-
+  Use when creating a new skill, editing an existing skill, or when asked to
+  document a reusable process or technique
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - create a new skill
+  - edit a skill
+  - skill generator
+  - document a reusable process
+when_to_use:
+  - >-
+    Creating or materially editing a skill with baseline failure and pressure
+    testing.
+  - The user asks to document a reusable process or technique as a skill.
+  - >-
+    A process pattern needs progressive disclosure, templates, or skill-quality
+    gates.
+when_not_to_use:
+  - Only adding metadata to existing skills for catalog retrieval.
+  - The task is creating a project or AGENTS.md file.
+  - No reusable agent behavior is being captured.
 license: MIT
 compatibility: opencode
 ---

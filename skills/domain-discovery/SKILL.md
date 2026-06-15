@@ -1,6 +1,20 @@
 ---
 name: domain-discovery
-description: Structured discovery for new domains using breadth-before-depth interviewing. Maps the landscape of people, projects, and challenges before diving deep. Feeds into knowledge-capture for persistence.
+description: >-
+  Structured discovery for new domains using breadth-before-depth interviewing.
+  Maps the landscape of people, projects, and challenges before diving deep.
+  Feeds into knowledge-capture for persistence.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - domain discovery
+  - learn about my team
+  - set up tracking
+  - map this domain
+  - new domain intake
 ---
 
 # Domain Discovery

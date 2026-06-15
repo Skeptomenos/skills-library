@@ -1,13 +1,29 @@
 ---
 name: morning-boot
-description: The master orchestrator for your morning routine. Parallelizes scans across email, calendar, Slack, and Jira, then synthesizes into a daily briefing. Path-aware — scans both work and life when run from KB root.
+description: >-
+  The master orchestrator for your morning routine. Parallelizes scans across
+  email, calendar, Slack, and Jira, then synthesizes into a daily briefing.
+  Path-aware — scans both work and life when run from KB root.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
   - start my day
   - morning routine
   - morning boot
+when_to_use:
+  - 'Starting the day with a briefing across email, calendar, Slack, and Jira.'
+  - 'The user asks for a morning routine, daily scan, or start-of-day plan.'
+  - A path-aware work/life operations synthesis is needed.
+when_not_to_use:
+  - Closing the day; use evening-close.
+  - Only drafting or sending one message.
+  - Only inspecting one calendar event or Jira ticket.
 template: daily-log-template.md
-created: 2026-01-09
-updated: 2026-01-20
+created: 2026-01-09T00:00:00.000Z
+updated: 2026-01-20T00:00:00.000Z
 ---
 
 <!--

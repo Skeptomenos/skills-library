@@ -1,11 +1,19 @@
 ---
 name: knowledge-capture
-description: Extract entities from conversation (people, projects, decisions, topics) and organize them into knowledge base files. Creates files using templates, maintains folder indexes, and triggers cross-linking.
+description: >-
+  Extract entities from conversation (people, projects, decisions, topics) and
+  organize them into knowledge base files. Creates files using templates,
+  maintains folder indexes, and triggers cross-linking.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "dump:"
-  - "capture:"
-  - "quick thought"
-  - "route this"
+  - 'dump:'
+  - 'capture:'
+  - quick thought
+  - route this
 ---
 
 # Knowledge Capture

@@ -1,11 +1,37 @@
 ---
 name: auto-skill
-description: |
-  Autonomous skill extraction system that captures reusable knowledge from work sessions.
-  Triggers: (1) /auto-skill command to review session learnings, (2) "save this as a skill"
-  or "extract a skill from this", (3) "what did we learn?", (4) After any task involving
-  non-obvious debugging, workarounds, or trial-and-error discovery. Creates new OpenCode
+description: >
+  Autonomous skill extraction system that captures reusable knowledge from work
+  sessions.
+
+  Triggers: (1) /auto-skill command to review session learnings, (2) "save this
+  as a skill"
+
+  or "extract a skill from this", (3) "what did we learn?", (4) After any task
+  involving
+
+  non-obvious debugging, workarounds, or trial-and-error discovery. Creates new
+  OpenCode
+
   skills when valuable, reusable knowledge is identified.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - auto-skill
+  - save this as a skill
+  - extract a skill
+  - what did we learn
+when_to_use:
+  - A session produced reusable process knowledge worth preserving as a skill.
+  - 'The user asks to save, extract, or codify a repeatable workflow.'
+  - A non-obvious debugging or tool-use lesson should become reusable guidance.
+when_not_to_use:
+  - The work produced no reusable process insight.
+  - The user only needs a one-off note or code comment.
+  - Creating a project or index entry; use ai-dev repo workflow skills instead.
 license: MIT
 compatibility: opencode
 ---

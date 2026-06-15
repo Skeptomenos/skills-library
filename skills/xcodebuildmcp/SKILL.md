@@ -1,6 +1,32 @@
 ---
 name: xcodebuildmcp
-description: Official skill for XcodeBuildMCP (preferred). Use when doing iOS/macOS/watchOS/tvOS/visionOS work (build, test, run, debug, log, UI automation).
+description: >-
+  Official skill for XcodeBuildMCP (preferred). Use when doing
+  iOS/macOS/watchOS/tvOS/visionOS work (build, test, run, debug, log, UI
+  automation).
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - xcodebuildmcp
+  - iOS simulator workflow
+  - run iOS app
+  - Xcode build test run
+  - simulator UI automation
+when_to_use:
+  - >-
+    Using XcodeBuildMCP for Apple platform build, test, run, debug, logs, or UI
+    automation.
+  - Running an iOS simulator workflow through MCP tools.
+  - >-
+    The user asks for Xcode project discovery, schemes, simulator launch, or app
+    logs.
+when_not_to_use:
+  - The task is not Apple-platform development.
+  - XcodeBuildMCP tools are unavailable and the user has not enabled them.
+  - A plain SwiftPM or macOS shell workflow is explicitly requested instead.
 ---
 
 # XcodeBuildMCP

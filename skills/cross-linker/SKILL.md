@@ -1,6 +1,20 @@
 ---
 name: cross-linker
-description: Discover and create [[wikilinks]] between knowledge base files. Uses evidence-based confidence tiers. Updates frontmatter related field. Works with knowledge-capture and gardener.
+description: >-
+  Discover and create [[wikilinks]] between knowledge base files. Uses
+  evidence-based confidence tiers. Updates frontmatter related field. Works with
+  knowledge-capture and gardener.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - cross-link knowledge
+  - create wikilinks
+  - link files
+  - connect notes
+  - knowledge graph links
 ---
 
 # Cross-Linker

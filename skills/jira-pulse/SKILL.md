@@ -1,14 +1,21 @@
 ---
 name: jira-pulse
-description: Use when scanning Jira for active tickets, deadlines, and blockers. Provides structured visibility into the user's task queue.
+description: >-
+  Use when scanning Jira for active tickets, deadlines, and blockers. Provides
+  structured visibility into the user's task queue.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
   - check my jira
   - jira status
   - what tickets do i have
   - my tasks
 template: jira-pulse-template.md
-created: 2026-01-20
-updated: 2026-01-20
+created: 2026-01-20T00:00:00.000Z
+updated: 2026-01-20T00:00:00.000Z
 ---
 
 <!--

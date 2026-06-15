@@ -1,9 +1,29 @@
 ---
 name: path-discovery
-description: Discover the filesystem context of the Knowledge Base, including KB root, operating mode (dual/single), and current hemisphere.
-triggers: 
-created: 2026-01-21
-updated: 2026-01-21
+description: >-
+  Discover the filesystem context of the Knowledge Base, including KB root,
+  operating mode (dual/single), and current hemisphere.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - path discovery
+  - find KB root
+  - detect hemisphere
+  - filesystem context
+  - where am I
+when_to_use:
+  - 'A workflow needs KB root, operating mode, or current hemisphere context.'
+  - Identity or personal workflow skills need filesystem context first.
+  - The current folder may be a floating hemisphere or non-standard KB layout.
+when_not_to_use:
+  - The relevant root and mode are already known.
+  - The task is repository navigation in ai-dev; use repo-navigation.
+  - The user is asking to change filesystem structure rather than discover it.
+created: 2026-01-21T00:00:00.000Z
+updated: 2026-01-21T00:00:00.000Z
 ---
 
 <!--

@@ -1,10 +1,33 @@
 ---
 name: llm-council
 description: >
-  Orchestrate a configurable, multi-member CLI planning council (Codex, Claude Code, Gemini, OpenCode, or custom)
-  to produce independent implementation plans, anonymize and randomize them, then judge and merge into one final plan.
-  Use when you need a robust, bias-resistant planning workflow, structured JSON outputs, retries,
-  and failure handling across multiple CLI agents.
+  Orchestrate a configurable, multi-member CLI planning council (Codex, Claude
+  Code, Gemini, OpenCode, or custom) to produce independent implementation
+  plans, anonymize and randomize them, then judge and merge into one final plan.
+  Use when you need a robust, bias-resistant planning workflow, structured JSON
+  outputs, retries, and failure handling across multiple CLI agents.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - LLM council
+  - multi-agent planning
+  - independent implementation plans
+  - bias-resistant planning
+when_to_use:
+  - >-
+    A complex task needs multiple independent CLI-agent plans and a judged
+    synthesis.
+  - The user explicitly asks for an LLM council or anonymized planning round.
+  - >-
+    Planning quality matters more than speed and the 30-minute session
+    constraint is acceptable.
+when_not_to_use:
+  - The task is small enough for direct implementation.
+  - The session cannot remain open long enough for the council workflow.
+  - The user needs code changes now rather than comparative planning.
 ---
 
 # LLM Council Skill

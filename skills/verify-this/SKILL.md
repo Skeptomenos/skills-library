@@ -1,7 +1,33 @@
 ---
 name: verify-this
-description: Verify a claim with fresh local evidence. Use when asked to prove a fix, confirm behavior, compare before/after results, or produce a VERIFIED, NOT VERIFIED, or INCONCLUSIVE verdict.
-source: Adapted from cursor/plugins cursor-team-kit verify-this at 3347cbab5b54136f6fba0994c3a01a56f7fb7fca.
+description: >-
+  Verify a claim with fresh local evidence. Use when asked to prove a fix,
+  confirm behavior, compare before/after results, or produce a VERIFIED, NOT
+  VERIFIED, or INCONCLUSIVE verdict.
+author: Cursor
+source:
+  type: git
+  name: cursor/plugins
+  url: 'https://github.com/cursor/plugins'
+  path: cursor-team-kit/skills/verify-this/SKILL.md
+  commit: 3347cbab5b54136f6fba0994c3a01a56f7fb7fca
+  version: 1.1.0
+triggers:
+  - verify this
+  - prove it works
+  - did this fix it
+  - show evidence
+  - before after verification
+when_to_use:
+  - A specific claim needs fresh local evidence and a falsifiable verdict.
+  - >-
+    A fix needs before/after reproduction, measurement, screenshots, or command
+    output.
+  - Tests pass but user-visible behavior still needs concrete confirmation.
+when_not_to_use:
+  - The claim is vague and cannot be made measurable.
+  - The user needs broad exploratory QA; use dogfood.
+  - The task is planning or implementation rather than evidence capture.
 ---
 
 # Verify This

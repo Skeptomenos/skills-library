@@ -1,11 +1,19 @@
 ---
 name: react-standards
-description: React and frontend standards — component purity, hooks rules, server state via TanStack Query, accessibility, performance. Use when writing or reviewing React components or frontend code.
+description: >-
+  React and frontend standards — component purity, hooks rules, server state via
+  TanStack Query, accessibility, performance. Use when writing or reviewing
+  React components or frontend code.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "writing React"
-  - "React component"
-  - "useEffect"
-  - "frontend state management"
+  - writing React
+  - React component
+  - useEffect
+  - frontend state management
 when_to_use:
   - Writing or modifying React components or hooks
   - Choosing frontend state management

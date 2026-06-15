@@ -1,10 +1,18 @@
 ---
 name: ios-agentic-standards
-description: iOS agentic development workflow — XcodeBuildMCP usage, long-running agent loops, test-driven agent patterns, project structure for unsupervised sessions. Use when setting up or running agent-driven iOS development.
+description: >-
+  iOS agentic development workflow — XcodeBuildMCP usage, long-running agent
+  loops, test-driven agent patterns, project structure for unsupervised
+  sessions. Use when setting up or running agent-driven iOS development.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "iOS agent workflow"
-  - "xcodebuild"
-  - "Xcode automation"
+  - iOS agent workflow
+  - xcodebuild
+  - Xcode automation
 when_to_use:
   - Setting up an iOS project for agent-driven development
   - Running build/test/simulator loops on iOS projects

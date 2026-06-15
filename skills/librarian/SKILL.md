@@ -1,13 +1,26 @@
 ---
 name: librarian
-description: Knowledge maintenance skill for compacting, archiving, and organizing the knowledge base. Preserves wisdom while reducing noise.
+description: >-
+  Knowledge maintenance skill for compacting, archiving, and organizing the
+  knowledge base. Preserves wisdom while reducing noise.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "compact:"
-  - "archive:"
-  - "clean up"
-  - "organize knowledge"
-created: 2026-02-01
-updated: 2026-02-01
+  - 'compact:'
+  - 'archive:'
+  - clean up
+  - organize knowledge
+when_not_to_use:
+  - >-
+    The user is capturing new information rather than compacting existing
+    knowledge.
+  - The request is a codebase refactor or repository cleanup.
+  - Deleting or archiving active experimental work without verification.
+created: 2026-02-01T00:00:00.000Z
+updated: 2026-02-01T00:00:00.000Z
 ---
 
 # Librarian Skill

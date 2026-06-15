@@ -1,6 +1,35 @@
 ---
 name: create-project
-description: How to create a new project in the ai-dev monorepo. Covers placement via decision tree, required files, naming, scope map, and index.md updates. Use when asked to "create a new", "add a project", "start a new", "scaffold", or when a new piece of work needs a home. Does NOT cover AGENTS.md writing conventions (load create-agents-md) or index maintenance (load update-index).
+description: >-
+  How to create a new project in the ai-dev monorepo. Covers placement via
+  decision tree, required files, naming, scope map, and index.md updates. Use
+  when asked to "create a new", "add a project", "start a new", "scaffold", or
+  when a new piece of work needs a home. Does NOT cover AGENTS.md writing
+  conventions (load create-agents-md) or index maintenance (load update-index).
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - create a new project in ai-dev
+  - create a new project in ai-dev and update indexes
+  - add a project
+  - start a new project
+  - scaffold project
+when_to_use:
+  - >-
+    Creating a new project or top-level project directory in the ai-dev
+    monorepo.
+  - Creating a new ai-dev project before updating root and category indexes.
+  - >-
+    Choosing the correct category, required files, branch scope, and project
+    naming.
+  - A new piece of work needs a durable home in the repository.
+when_not_to_use:
+  - Only adding or updating index.md entries; use update-index.
+  - Only writing AGENTS.md instructions; use create-agents-md.
+  - Making changes inside an existing project.
 ---
 
 ## Step 0 — Linear Issue (Soft)

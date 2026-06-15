@@ -1,7 +1,30 @@
 ---
 name: agent-compatibility-audit
-description: Audit whether a repository is easy for coding agents to start, validate, and trust. Use when checking agent readiness, startup docs, validation loops, or whether a project is AFK-agent friendly.
-source: Adapted from cursor/plugins agent-compatibility at 3347cbab5b54136f6fba0994c3a01a56f7fb7fca.
+description: >-
+  Audit whether a repository is easy for coding agents to start, validate, and
+  trust. Use when checking agent readiness, startup docs, validation loops, or
+  whether a project is AFK-agent friendly.
+author: Cursor
+source:
+  type: git
+  name: cursor/plugins
+  url: 'https://github.com/cursor/plugins'
+  path: agent-compatibility/skills/check-agent-compatibility/SKILL.md
+  commit: 3347cbab5b54136f6fba0994c3a01a56f7fb7fca
+  version: 1.0.0
+triggers:
+  - agent compatibility audit
+  - agent-ready repo
+  - AFK-agent friendly
+  - startup validation docs review
+when_to_use:
+  - Auditing whether a repository is ready for autonomous coding agents.
+  - 'Checking setup docs, validation loops, and startup reliability.'
+  - Preparing a project or public split for agent-driven work.
+when_not_to_use:
+  - Only fixing a known implementation bug.
+  - Reviewing product UX without concern for agent onboarding.
+  - Running a normal code review instead of a repo-readiness audit.
 ---
 
 # Agent Compatibility Audit

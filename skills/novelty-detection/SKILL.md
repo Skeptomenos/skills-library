@@ -1,9 +1,35 @@
 ---
 name: novelty-detection
-description: Reusable novelty detection module. Compares new content against known state to classify as DUPLICATE, UPDATE, or NOVEL. Extracts deltas for updates. Used by post-meeting-drill, mail-triage, slack-pulse.
-version: 1.0
-created: 2026-01-28
-updated: 2026-01-28
+description: >-
+  Reusable novelty detection module. Compares new content against known state to
+  classify as DUPLICATE, UPDATE, or NOVEL. Extracts deltas for updates. Used by
+  post-meeting-drill, mail-triage, slack-pulse.
+author: David Helmus
+version: '1.0'
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - novelty detection
+  - duplicate update novel
+  - compare against known state
+  - extract deltas
+when_to_use:
+  - >-
+    Classifying incoming content as duplicate, update, or novel before
+    persistence.
+  - >-
+    A workflow needs semantic comparison against known facts, recent entries, or
+    open items.
+  - >-
+    Post-meeting, mail, or Slack processing must avoid redundant knowledge
+    capture.
+when_not_to_use:
+  - The user wants creative ideation or novelty for its own sake.
+  - No known state is available to compare against.
+  - The task is code duplicate detection or static analysis.
+created: 2026-01-28T00:00:00.000Z
+updated: 2026-01-28T00:00:00.000Z
 ---
 
 # Novelty Detection Skill

@@ -1,15 +1,23 @@
 ---
 name: sql-standards
-description: SQL and database standards — schema design, parameterized queries, indexing, versioned migrations. Use when designing schemas, writing SQL, or planning migrations.
+description: >-
+  SQL and database standards — schema design, parameterized queries, indexing,
+  versioned migrations. Use when designing schemas, writing SQL, or planning
+  migrations.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "database schema"
-  - "writing SQL"
-  - "migration"
-  - "query performance"
+  - database schema
+  - writing SQL
+  - migration
+  - query performance
 when_to_use:
   - Designing or modifying a database schema
   - Writing SQL queries or migrations
-  - Diagnosing query performance (N+1, missing indexes)
+  - 'Diagnosing query performance (N+1, missing indexes)'
 when_not_to_use:
   - ORM-level application architecture (load architecture-standards)
 ---

@@ -1,25 +1,41 @@
 ---
 name: last30days
-description: Research any topic across Reddit, X, and the web from the last 30 days. Best for prompt research and trend discovery.
+description: >-
+  Research any topic across Reddit, X, and the web from the last 30 days. Best
+  for prompt research and trend discovery.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - last 30 days research
+  - recent Reddit X web
+  - trend discovery
+  - prompt research
+when_to_use:
+  - 'Researching a topic across recent Reddit, X, and web sources.'
+  - The user asks what people have shared or discussed in the last 30 days.
+  - Generating prompt or trend research from recent community signals.
+when_not_to_use:
+  - The user needs stable documentation or source-code facts.
+  - The task is an ordinary web search over all time.
+  - Researching private repo content only.
 metadata:
-  {
-    "openclaw": {
-      "emoji": "📅",
-      "requires": { 
-        "bins": ["bird"], 
-        "env": ["OPENAI_API_KEY"] 
-      },
-      "install": [
-        {
-          "id": "npm",
-          "kind": "npm",
-          "package": "@steipete/bird",
-          "bins": ["bird"],
-          "label": "Install Bird CLI for X search"
-        }
-      ]
-    }
-  }
+  openclaw:
+    emoji: "\U0001F4C5"
+    requires:
+      bins:
+        - bird
+      env:
+        - OPENAI_API_KEY
+    install:
+      - id: npm
+        kind: npm
+        package: '@steipete/bird'
+        bins:
+          - bird
+        label: Install Bird CLI for X search
 ---
 
 # /last30days

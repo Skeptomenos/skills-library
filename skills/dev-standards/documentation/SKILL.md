@@ -1,10 +1,18 @@
 ---
 name: documentation-standards
-description: Documentation standards — intent-over-syntax comments, README structure, API doc generation, commit message context. Use when writing documentation, READMEs, or code comments.
+description: >-
+  Documentation standards — intent-over-syntax comments, README structure, API
+  doc generation, commit message context. Use when writing documentation,
+  READMEs, or code comments.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "write a README"
-  - "documentation"
-  - "code comments"
+  - write a README
+  - documentation
+  - code comments
 when_to_use:
   - Writing or restructuring READMEs or docs
   - Deciding what to comment in code

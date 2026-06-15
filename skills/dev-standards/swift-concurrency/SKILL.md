@@ -1,11 +1,19 @@
 ---
 name: swift-concurrency-standards
-description: Swift 6.x concurrency standards — strict actor isolation, Sendable conformance, structured concurrency, legacy GCD replacements, common error fixes. Use when writing async Swift code or fixing concurrency errors.
+description: >-
+  Swift 6.x concurrency standards — strict actor isolation, Sendable
+  conformance, structured concurrency, legacy GCD replacements, common error
+  fixes. Use when writing async Swift code or fixing concurrency errors.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "Swift concurrency"
-  - "actor isolation"
-  - "Sendable error"
-  - "DispatchQueue"
+  - Swift concurrency
+  - actor isolation
+  - Sendable error
+  - DispatchQueue
 when_to_use:
   - Writing async/concurrent Swift code
   - Fixing Sendable or actor-isolation compiler errors

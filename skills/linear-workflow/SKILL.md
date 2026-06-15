@@ -1,6 +1,30 @@
 ---
 name: linear-workflow
-description: Session lifecycle with Linear issue tracking for the ai-dev monorepo. Uses the `linear` CLI (schpet/linear-cli), not the Linear MCP. Covers issue discovery at session start, milestone comments during work, status transitions, and session-end summaries. Use when working on tracked work, starting a session, or ending a session. Does NOT cover git branching or PRs (load git-workflow).
+description: >-
+  Session lifecycle with Linear issue tracking for the ai-dev monorepo. Uses the
+  `linear` CLI (schpet/linear-cli), not the Linear MCP. Covers issue discovery
+  at session start, milestone comments during work, status transitions, and
+  session-end summaries. Use when working on tracked work, starting a session,
+  or ending a session. Does NOT cover git branching or PRs (load git-workflow).
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - start a Linear issue
+  - Linear issue workflow
+  - transition Linear status
+  - session lifecycle
+  - Linear PR handoff
+when_to_use:
+  - 'Starting, updating, or closing tracked work in Linear for ai-dev.'
+  - 'Finding issue context, changing Linear status, or adding milestone comments.'
+  - Connecting session lifecycle work to Linear issue tracking.
+when_not_to_use:
+  - 'Only creating branches, commits, pushes, or PRs; use git-workflow.'
+  - The work is intentionally untracked and does not need Linear state.
+  - The user wants generic project planning without Linear.
 ---
 
 ## Linear Setup

@@ -1,6 +1,19 @@
 ---
 name: mail-triage
-description: Use when user asks to check email, process inbox, or scan for messages. Exhaustively drains inbox and outputs structured triage report with meeting notes detection.
+description: >-
+  Use when user asks to check email, process inbox, or scan for messages.
+  Exhaustively drains inbox and outputs structured triage report with meeting
+  notes detection.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - mail triage
+  - triage Gmail
+  - email inbox scan
+  - process emails
 license: MIT
 compatibility: opencode
 ---

@@ -1,11 +1,19 @@
 ---
 name: testing-standards
-description: Testing standards — TDD workflow, testing pyramid (unit/integration/e2e), mocking rules (prefer real over fake), test organization, back-pressure gates. Use when writing, restructuring, or reviewing tests.
+description: >-
+  Testing standards — TDD workflow, testing pyramid (unit/integration/e2e),
+  mocking rules (prefer real over fake), test organization, back-pressure gates.
+  Use when writing, restructuring, or reviewing tests.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "writing tests"
-  - "test strategy"
-  - "mocking"
-  - "TDD"
+  - writing tests
+  - test strategy
+  - mocking
+  - TDD
 when_to_use:
   - Writing or restructuring tests
   - Deciding what to mock vs run for real

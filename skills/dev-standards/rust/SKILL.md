@@ -1,10 +1,18 @@
 ---
 name: rust-standards
-description: Rust coding standards — no unwrap in production, clippy-clean, library-first structure, thiserror/anyhow error handling. Use when writing or reviewing Rust code.
+description: >-
+  Rust coding standards — no unwrap in production, clippy-clean, library-first
+  structure, thiserror/anyhow error handling. Use when writing or reviewing Rust
+  code.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "writing Rust"
-  - "cargo project"
-  - "Rust error handling"
+  - writing Rust
+  - cargo project
+  - Rust error handling
 when_to_use:
   - Writing or modifying Rust code
   - Structuring a new Rust crate or binary

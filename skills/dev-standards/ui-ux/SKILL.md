@@ -1,11 +1,19 @@
 ---
 name: ui-ux-standards
-description: UI/UX interaction standards — keyboard operability, loading/feedback states, accessibility (WCAG), mobile touch targets, design tokens. Use when building or reviewing user-facing UI.
+description: >-
+  UI/UX interaction standards — keyboard operability, loading/feedback states,
+  accessibility (WCAG), mobile touch targets, design tokens. Use when building
+  or reviewing user-facing UI.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "UI design"
-  - "loading state"
-  - "accessibility"
-  - "form UX"
+  - UI design
+  - loading state
+  - accessibility
+  - form UX
 when_to_use:
   - Building or polishing user-facing UI
   - Reviewing interaction quality or accessibility

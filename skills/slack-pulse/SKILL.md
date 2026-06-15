@@ -1,13 +1,29 @@
 ---
 name: slack-pulse
-description: Scan Slack for mentions, DMs, and high-value channel activity requiring attention.
-triggers: 
+description: >-
+  Scan Slack for mentions, DMs, and high-value channel activity requiring
+  attention.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - Slack pulse
+  - scan Slack
+  - Slack mentions
+  - Slack DMs
+  - channel activity
+when_not_to_use:
+  - Drafting or sending one Slack message; use slack-write.
+  - 'The user asks about email, Jira, or calendar only.'
+  - No Slack identity or channel context is available.
 template: slack-pulse-template.md
-config: 
-- path: work/operations/slack-map.md
+config:
+  - path: work/operations/slack-map.md
 as: slack_config
-created: 2026-01-09
-updated: 2026-01-09
+created: 2026-01-09T00:00:00.000Z
+updated: 2026-01-09T00:00:00.000Z
 ---
 
 <!--

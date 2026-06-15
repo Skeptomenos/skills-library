@@ -1,10 +1,31 @@
 ---
 name: post-meeting-drill
-description: Deep processing of meeting notes with context hydration, entity resolution, thought-routing, urgency assessment, and knowledge persistence.
-triggers: 
+description: >-
+  Deep processing of meeting notes with context hydration, entity resolution,
+  thought-routing, urgency assessment, and knowledge persistence.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - post-meeting drill
+  - process meeting notes
+  - meeting note extraction
+  - persist meeting knowledge
+when_to_use:
+  - >-
+    Deep-processing meeting notes into persistent knowledge with context
+    hydration.
+  - 'Resolving meeting entities, decisions, action items, risks, and urgency.'
+  - Mail triage or the user provides a meeting note document to process.
+when_not_to_use:
+  - The user needs a quick meeting summary only.
+  - 'No meeting notes, transcript, or document is available.'
+  - The task is general daily planning rather than one meeting.
 template: post-meeting-drill-template.md
-created: 2026-01-07
-updated: 2026-01-10
+created: 2026-01-07T00:00:00.000Z
+updated: 2026-01-10T00:00:00.000Z
 ---
 
 <!--

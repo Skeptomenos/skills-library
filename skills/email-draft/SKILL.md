@@ -1,9 +1,20 @@
 ---
 name: email-draft
-description: Use when drafting emails, composing replies, or writing professional messages that will be sent via Gmail.
-triggers: 
-created: 2026-01-09
-updated: 2026-01-10
+description: >-
+  Use when drafting emails, composing replies, or writing professional messages
+  that will be sent via Gmail.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - draft an email
+  - compose a reply
+  - write a Gmail message
+  - professional email
+created: 2026-01-09T00:00:00.000Z
+updated: 2026-01-10T00:00:00.000Z
 ---
 
 <!--

@@ -1,11 +1,19 @@
 ---
 name: logging-standards
-description: Logging standards — structured JSON logging (Pino/Consola), log levels, request IDs, PII redaction, no console.log. Use when implementing or reviewing logging.
+description: >-
+  Logging standards — structured JSON logging (Pino/Consola), log levels,
+  request IDs, PII redaction, no console.log. Use when implementing or reviewing
+  logging.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "add logging"
-  - "console.log"
-  - "structured logging"
-  - "log levels"
+  - add logging
+  - console.log
+  - structured logging
+  - log levels
 when_to_use:
   - Implementing logging in backend or frontend code
   - Choosing a logging library or log format

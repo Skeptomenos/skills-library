@@ -1,11 +1,19 @@
 ---
 name: ts-standards
-description: TypeScript & Node.js coding standards — strict typing, Zod at IO boundaries, async patterns, 3-layer separation, pnpm ecosystem rules. Use when writing or reviewing TypeScript or Node.js code.
+description: >-
+  TypeScript & Node.js coding standards — strict typing, Zod at IO boundaries,
+  async patterns, 3-layer separation, pnpm ecosystem rules. Use when writing or
+  reviewing TypeScript or Node.js code.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "writing TypeScript"
-  - "new Node.js code"
-  - "tsconfig setup"
-  - "TypeScript code review"
+  - writing TypeScript
+  - new Node.js code
+  - tsconfig setup
+  - TypeScript code review
 when_to_use:
   - Writing or modifying TypeScript/Node.js code
   - Setting up a new TS project or tsconfig

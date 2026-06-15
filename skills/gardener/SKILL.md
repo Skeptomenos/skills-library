@@ -1,6 +1,19 @@
 ---
 name: gardener
-description: Maintain knowledge base health. Audits indexes, fixes broken links, detects orphans, and suggests promotions when entities outgrow their containers. Works with knowledge-capture and cross-linker.
+description: >-
+  Maintain knowledge base health. Audits indexes, fixes broken links, detects
+  orphans, and suggests promotions when entities outgrow their containers. Works
+  with knowledge-capture and cross-linker.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - garden knowledge
+  - maintain knowledge base
+  - prune stale notes
+  - knowledge hygiene
 ---
 
 # Gardener

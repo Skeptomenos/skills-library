@@ -1,11 +1,19 @@
 ---
 name: python-standards
-description: Python coding standards — 100% type hints, Pydantic for structured data, uv/ruff toolchain, modern 3.12+ idioms. Use when writing or reviewing Python code.
+description: >-
+  Python coding standards — 100% type hints, Pydantic for structured data,
+  uv/ruff toolchain, modern 3.12+ idioms. Use when writing or reviewing Python
+  code.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "writing Python"
-  - "new Python project"
-  - "pyproject setup"
-  - "Python code review"
+  - writing Python
+  - new Python project
+  - pyproject setup
+  - Python code review
 when_to_use:
   - Writing or modifying Python code
   - Setting up a new Python project or toolchain

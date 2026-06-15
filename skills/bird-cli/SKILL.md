@@ -1,9 +1,29 @@
 ---
 name: bird-cli
-description: Use when reading X/Twitter posts, tweets, threads, or x.com links. Also for searching Twitter content, trending topics, bookmarks, mentions, and user profiles via CLI.
+description: >-
+  Use when reading X/Twitter posts, tweets, threads, or x.com links. Also for
+  searching Twitter content, trending topics, bookmarks, mentions, and user
+  profiles via CLI.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - read tweet
+  - x.com link
+  - twitter search
+  - bird cli
+  - X bookmarks
+when_not_to_use:
+  - >-
+    Fetching ordinary static web pages where WebFetch or browser tools are
+    enough.
+  - Posting or mutating social content.
+  - Researching non-X sources only.
 license: MIT
 compatibility: opencode
-updated: 2026-02-01
+updated: 2026-02-01T00:00:00.000Z
 ---
 
 # bird-cli

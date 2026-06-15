@@ -1,6 +1,22 @@
 ---
 name: cal-grid
-description: Map the daily calendar grid identifying meetings, deep work slots, and preparation needs.
+description: >-
+  Map the daily calendar grid identifying meetings, deep work slots, and
+  preparation needs.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - calendar grid
+  - what is on my calendar
+  - meetings today
+  - deep work slots
+when_not_to_use:
+  - The task is not calendar or schedule planning.
+  - The user asks to create or modify calendar events directly.
+  - A broad morning briefing is needed; use morning-boot.
 license: MIT
 compatibility: opencode
 ---

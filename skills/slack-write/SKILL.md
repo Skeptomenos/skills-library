@@ -1,9 +1,20 @@
 ---
 name: slack-write
-description: Use when writing Slack messages, team announcements, or channel posts. Ensures correct mrkdwn formatting instead of Markdown.
-triggers: 
-created: 2026-01-07
-updated: 2026-01-10
+description: >-
+  Use when writing Slack messages, team announcements, or channel posts. Ensures
+  correct mrkdwn formatting instead of Markdown.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - write Slack message
+  - draft Slack reply
+  - Slack update
+  - compose Slack
+created: 2026-01-07T00:00:00.000Z
+updated: 2026-01-10T00:00:00.000Z
 ---
 
 <!--

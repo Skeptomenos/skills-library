@@ -1,11 +1,19 @@
 ---
 name: tooling-standards
-description: Tooling standards — task runner preference (just > make), required package managers (pnpm/uv/cargo), AST-based code transformation, linter/formatter matrix. Use when choosing tools, task runners, or setting up linting.
+description: >-
+  Tooling standards — task runner preference (just > make), required package
+  managers (pnpm/uv/cargo), AST-based code transformation, linter/formatter
+  matrix. Use when choosing tools, task runners, or setting up linting.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "task runner"
-  - "package manager"
-  - "linter setup"
-  - "which tool"
+  - task runner
+  - package manager
+  - linter setup
+  - which tool
 when_to_use:
   - Choosing or configuring build/lint/format tooling
   - Deciding how to run project tasks

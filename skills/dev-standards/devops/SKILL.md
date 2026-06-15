@@ -1,11 +1,19 @@
 ---
 name: devops-standards
-description: DevOps and infrastructure standards — Terraform/IaC, least-privilege IAM, SHA-pinned GitHub Actions, OIDC auth, Docker hardening, vulnerability scanning. Use when working on infrastructure, CI/CD, Docker, or Terraform.
+description: >-
+  DevOps and infrastructure standards — Terraform/IaC, least-privilege IAM,
+  SHA-pinned GitHub Actions, OIDC auth, Docker hardening, vulnerability
+  scanning. Use when working on infrastructure, CI/CD, Docker, or Terraform.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "Terraform"
-  - "CI/CD pipeline"
-  - "Dockerfile"
-  - "GitHub Actions"
+  - Terraform
+  - CI/CD pipeline
+  - Dockerfile
+  - GitHub Actions
 when_to_use:
   - Writing or modifying infrastructure code
   - Setting up or changing CI/CD pipelines

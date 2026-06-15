@@ -1,9 +1,31 @@
 ---
 name: identity-discovery
-description: Discover the user's digital identity (emails, account IDs) by leveraging filesystem context from path-discovery. Required for MCP tool handshaking.
-triggers: 
-created: 2026-01-09
-updated: 2026-01-21
+description: >-
+  Discover the user's digital identity (emails, account IDs) by leveraging
+  filesystem context from path-discovery. Required for MCP tool handshaking.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - discover identity
+  - who am I
+  - resolve email
+  - MCP identity
+  - account context
+when_to_use:
+  - >-
+    A skill or workflow needs the user's email, account IDs, KB root, or digital
+    identity.
+  - Tool calls require identity context that is not already supplied.
+  - A personal workflow needs account resolution before continuing.
+when_not_to_use:
+  - The necessary identity context is already known.
+  - The task is repository-only and does not need personal account data.
+  - The user is asking to change identity configuration rather than discover it.
+created: 2026-01-09T00:00:00.000Z
+updated: 2026-01-21T00:00:00.000Z
 ---
 
 <!--

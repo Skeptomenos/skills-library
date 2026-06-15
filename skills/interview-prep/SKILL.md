@@ -1,6 +1,19 @@
 ---
 name: interview-prep
-description: Generate tailored interview questions for hiring candidates. Gathers job description, resume, and hiring standards to create focused, role-appropriate questions.
+description: >-
+  Generate tailored interview questions for hiring candidates. Gathers job
+  description, resume, and hiring standards to create focused, role-appropriate
+  questions.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - interview prep
+  - prepare for interview
+  - candidate packet
+  - hiring loop
 ---
 
 # Interview Prep

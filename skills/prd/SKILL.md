@@ -1,6 +1,29 @@
 ---
 name: prd
-description: "Generate a Product Requirements Document (PRD) for a new feature. Use when planning a feature, starting a new project, or when asked to create a PRD. Triggers on: create a prd, write prd for, plan this feature, requirements for, spec out."
+description: >-
+  Generate a Product Requirements Document (PRD) for a new feature. Use when
+  planning a feature, starting a new project, or when asked to create a PRD.
+  Triggers on: create a prd, write prd for, plan this feature, requirements for,
+  spec out.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - write a product requirements document
+  - create a PRD
+  - feature requirements
+  - plan this feature
+  - spec out a feature
+when_to_use:
+  - Planning a new feature or product change before implementation.
+  - 'The user asks for a PRD, requirements document, or feature spec.'
+  - 'Clarifying scope, success criteria, and autonomy before coding starts.'
+when_not_to_use:
+  - The user asks to implement the feature immediately.
+  - A technical implementation plan already exists and only coding remains.
+  - The request is a short issue description rather than a full PRD.
 ---
 
 # PRD Generator

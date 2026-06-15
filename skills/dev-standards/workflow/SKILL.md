@@ -1,17 +1,28 @@
 ---
 name: workflow-standards
-description: Generic git and ops workflow standards — conventional commits, atomic PRs, env config validation, command timeout policy, multi-agent concurrency safety, dependency vetting. Use for git workflow, branching, PRs, or env/config setup in any repo.
+description: >-
+  Generic git and ops workflow standards — conventional commits, atomic PRs, env
+  config validation, command timeout policy, multi-agent concurrency safety,
+  dependency vetting. Use for git workflow, branching, PRs, or env/config setup
+  in any repo.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "git workflow"
-  - "branching"
-  - "commit message"
-  - "adding a dependency"
+  - git workflow
+  - branching
+  - commit message
+  - adding a dependency
 when_to_use:
-  - Branching, committing, or creating PRs in repos without their own git skill
+  - 'Branching, committing, or creating PRs in repos without their own git skill'
   - Setting up env/config validation
   - Vetting a new dependency
 when_not_to_use:
-  - ai-dev monorepo work (load git-workflow — it has repo-specific scope rules and supersedes this)
+  - >-
+    ai-dev monorepo work (load git-workflow — it has repo-specific scope rules
+    and supersedes this)
   - Docker/CI specifics (load devops-standards)
 ---
 

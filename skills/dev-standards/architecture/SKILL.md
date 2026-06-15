@@ -1,11 +1,19 @@
 ---
 name: architecture-standards
-description: Architecture standards — 3-layer pattern (presentation/service/data), feature-sliced frontend structure, DTOs between layers, no-breadcrumbs code hygiene. Use when designing module structure or organizing a codebase.
+description: >-
+  Architecture standards — 3-layer pattern (presentation/service/data),
+  feature-sliced frontend structure, DTOs between layers, no-breadcrumbs code
+  hygiene. Use when designing module structure or organizing a codebase.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "module structure"
-  - "folder structure"
-  - "layer separation"
-  - "where should this code live"
+  - module structure
+  - folder structure
+  - layer separation
+  - where should this code live
 when_to_use:
   - Designing or restructuring module/layer boundaries
   - Deciding where new code belongs

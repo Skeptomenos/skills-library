@@ -1,11 +1,19 @@
 ---
 name: api-design-standards
-description: API design standards — RESTful resources, JSON response envelope, status codes, pagination, versioning, input/output safety. Use when designing or modifying an API endpoint or contract.
+description: >-
+  API design standards — RESTful resources, JSON response envelope, status
+  codes, pagination, versioning, input/output safety. Use when designing or
+  modifying an API endpoint or contract.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
 triggers:
-  - "design an API"
-  - "new endpoint"
-  - "REST API"
-  - "API response shape"
+  - design an API
+  - new endpoint
+  - REST API
+  - API response shape
 when_to_use:
   - Designing or modifying API endpoints
   - Defining request/response contracts

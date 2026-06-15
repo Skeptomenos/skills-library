@@ -1,10 +1,34 @@
 ---
 name: leadership-coach
-description: "IC-to-Manager coaching for new leaders. Use for leadership challenges, team operations, stakeholder management, 1:1 prep, performance conversations, or when feeling overwhelmed as a new manager."
-triggers: 
-- "prep for 1: 1"
-created: 2026-01-07
-updated: 2026-01-10
+description: >-
+  IC-to-Manager coaching for new leaders. Use for leadership challenges, team
+  operations, stakeholder management, 1:1 prep, performance conversations, or
+  when feeling overwhelmed as a new manager.
+author: David Helmus
+version: 0.1.0
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - leadership coaching
+  - manager coaching
+  - '1:1 prep'
+  - performance conversation
+  - stakeholder management
+when_to_use:
+  - >-
+    Working through leadership, management, stakeholder, or team-operation
+    challenges.
+  - 'Preparing for 1:1s, performance conversations, or accountability follow-up.'
+  - The user feels overwhelmed in a new manager or leadership context.
+when_not_to_use:
+  - 'The task is an engineering implementation, code review, or repo workflow.'
+  - The user needs factual HR/legal policy guidance.
+  - >-
+    The request is a short message draft better handled by email or Slack
+    skills.
+created: 2026-01-07T00:00:00.000Z
+updated: 2026-01-10T00:00:00.000Z
 ---
 
 <!--
