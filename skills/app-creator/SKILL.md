@@ -1,6 +1,25 @@
 ---
 name: app-creator
 description: Orchestrate iOS/macOS app scaffolding and optional skill adoption for existing projects. Use when users want a guided wizard that can scaffold with XcodeGen and optionally install xcode-makefiles and simple-tasks.
+author: Paul Solt
+version: 0.9.8
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "app scaffolding"
+  - "XcodeGen"
+  - "scaffold iOS app"
+  - "scaffold macOS app"
+  - "adopt existing Xcode project"
+when_to_use:
+  - "Scaffolding a new iOS or macOS app with XcodeGen templates."
+  - "Adopting an existing Apple-platform project non-destructively."
+  - "Installing xcode-makefiles and simple-tasks as part of app setup."
+when_not_to_use:
+  - "Only strict Xcode Makefile tooling is needed; use xcode-makefiles."
+  - "Only lightweight local task tracking is needed; use simple-tasks."
+  - "The project is not an iOS or macOS app."
 ---
 
 # App Creator

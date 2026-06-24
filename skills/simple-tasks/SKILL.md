@@ -1,6 +1,25 @@
 ---
 name: simple-tasks
 description: Install a fast local task workflow for single-project planning with `scripts/task.sh` (claim, done, status, reporting) backed by `tasks/TASKS.md` and optional `tasks/details/` notes. Use for lightweight in-progress task coordination, not full team issue tracking.
+author: Paul Solt
+version: 0.9.8
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "task.sh"
+  - "local task tracking"
+  - "single-project planning"
+  - "lightweight backlog"
+  - "task status report"
+when_to_use:
+  - "Installing a lightweight local task CLI into one project."
+  - "Tracking single-project work in tasks/TASKS.md without a team issue tracker."
+  - "Generating quick task status, reporting, or agent handoff summaries."
+when_not_to_use:
+  - "The work should be tracked in Linear, Jira, GitHub Issues, or another team system."
+  - "The user only needs Xcode build/run/test tooling; use xcode-makefiles."
+  - "The task is a one-off command that does not need project-local task state."
 ---
 
 # Simple Tasks

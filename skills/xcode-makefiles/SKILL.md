@@ -1,6 +1,25 @@
 ---
 name: xcode-makefiles
 description: Install strict Xcode Makefile tooling for iOS/macOS projects, including build/run/test scripts with AGENT_NAME-based per-agent isolation under build/. Use when a project needs reproducible local CLI builds without full app scaffolding.
+author: Paul Solt
+version: 0.9.8
+source:
+  type: self
+  name: ai-dev
+triggers:
+  - "Xcode Makefile"
+  - "iOS CLI build"
+  - "macOS CLI build"
+  - "xcodebuild tooling"
+  - "AGENT_NAME build isolation"
+when_to_use:
+  - "Installing reproducible Makefile build, run, and test commands for an Xcode project."
+  - "Adding per-agent DerivedData, log, cache, and temp isolation under build/."
+  - "An existing or newly scaffolded iOS/macOS project needs CLI automation without full app scaffolding."
+when_not_to_use:
+  - "A full app scaffolding wizard is needed; use app-creator."
+  - "Only lightweight task tracking is needed; use simple-tasks."
+  - "The project is not managed with Xcode or xcodebuild."
 ---
 
 # Xcode Makefiles
