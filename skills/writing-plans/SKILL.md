@@ -111,7 +111,7 @@ modules, commands, tests, assumptions, and exit criteria.
   Assumption: <unconfirmed belief this step rests on, if any>
   Verify: <command that exposes the assumption if false>
 - [ ] Slice 2: <next vertical increment>
-- [ ] FINAL: independent verification — run a fresh-context verifier that did not write the code to re-derive every `[x]` claim as VERIFIED / DISPUTED / UNVERIFIABLE HERE and re-run the validation gate. Disputed claims re-enter Steps as open work. Protocol: `self-correction-loop` skill, `references/verify-plan-prompt.md`.
+- [ ] FINAL: independent verification — run a fresh-context verifier that did not write the code to re-derive every `[x]` claim as VERIFIED / DISPUTED / UNVERIFIABLE HERE and re-run the validation gate. Disputed claims re-enter Steps as open work. Protocol: `self-correction-loop` skill, `self-correction-loop/references/verify-plan-prompt.md`.
 
 Every plan ends with the FINAL independent-verification step. It may not be
 removed, and it may not be performed by the agent that implemented the steps.
