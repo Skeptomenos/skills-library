@@ -151,6 +151,8 @@ Some directories auto-publish to public GitHub repos via splitsh-lite CI on merg
 | `apps/portfolio-prism` | Skeptomenos/Portfolio-Prism-App |
 | `apps/open-jupy` | Skeptomenos/OpenJupy |
 | `apps/drawer` | Skeptomenos/Drawer |
+| `apps/luma` | Skeptomenos/Luma |
+| `apps/poker-chip-counter` | Skeptomenos/TableStakes |
 | `_infra/dev-handbook` | Skeptomenos/dev-handbook |
 | `_infra/skills` | Skeptomenos/skills-library |
 | `_infra/google-workspace-mcp-advanced` | Skeptomenos/google-workspace-mcp-advanced |
