@@ -39,13 +39,14 @@ ai-dev/
 ├── _infra/          Foundational infrastructure (dev-handbook, skills, MCP servers, ralphus)
 ├── agents/          Specialized agent implementations (personal-os, team-os, thoth)
 ├── devtools/        OpenCode ecosystem tools (canvas, kanban, opensync, inspect, smart-fork)
-├── apps/            Standalone applications (murmeln, vibe-remote, portfolio-prism, open-jupy, drawer)
+├── citadel-infra/   Live agent runtime / homelab ops (Alfred, Hermes, OpenClaw; start at AGENTS.md)
+├── apps/            Standalone applications (poker-chip-counter/TableStakes, portfolio-prism, meeting-shield, etc.)
 ├── research/        Deep research projects (agentic-knowledge)
 ├── work/            Work-adjacent tools (akasha-records)
 ├── <project>/_planning/  Private planning content (stripped by CI before public split)
 ├── docs/            Monorepo-level documentation
 ├── scripts/         Git hooks, worktree helper
-└── .agents/skills/  AI agent skills and procedures
+└── .agents/skills/  Project skill entrypoints (symlinks into _infra/skills; must resolve)
 ```
 
 ## How to Find Things
