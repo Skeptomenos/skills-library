@@ -20,7 +20,7 @@ Environment:
 
 Examples:
   ./register_skills.sh
-  SKILLS_AGENTS=codex SKILLS_NAMES="prd writing-plans" ./register_skills.sh
+  SKILLS_AGENTS=codex SKILLS_NAMES="prd git-workflow" ./register_skills.sh
   ./register_skills.sh github
   npx skills@latest update -g -y
 EOF

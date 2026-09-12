@@ -64,7 +64,6 @@ Skill writing is **TDD for process documentation**:
 | [`rust-standards`](skills/dev-standards/rust/SKILL.md) | Rust coding standards — no unwrap in production, clippy-clean, library-first structure, thiserror/anyhow error handling. Use when writing or reviewing Rust code. |
 | [`scorecard-synthesis`](skills/chief-of-staff/scorecard-synthesis/SKILL.md) | Synthesize hiring scorecards from interview transcripts. Analyzes candidate responses against role criteria and generates structured evaluation with evidence. |
 | [`security-standards`](skills/dev-standards/security/SKILL.md) | Security standards — edge input validation, auth/authorization patterns, BOLA checks, secrets handling, PII redaction, OWASP web headers. Use when handling user input, authentication, secrets, or reviewing security. |
-| [`self-correction-loop`](skills/self-correction-loop/SKILL.md) | Use when implementing multi-step work where the agent must catch its own mistakes and wrong assumptions during implementation, not at review. Defines the plan → probe → implement → validate → fix loop: a single validation gate, falsifiable assumptions, evidence-gated checkboxes, gate falsifiability, and independent fresh-context verification. Triggers on: implementation loop, self-correction, validation gate, fix own mistakes, verify assumptions, evidence rule, independent verification. |
 | [`simple-tasks`](skills/simple-tasks/SKILL.md) | Install a fast local task workflow for single-project planning with `scripts/task.sh` (claim, done, status, reporting) backed by `tasks/TASKS.md` and optional `tasks/details/` notes. Use for lightweight in-progress task coordination, not full team issue tracking. |
 | [`skill-generator`](skills/skill-generator/SKILL.md) | Use when creating a new skill, editing an existing skill, or when asked to document a reusable process or technique |
 | [`skill-router`](skills/skill-router/SKILL.md) | Search the central Skill Catalog MCP server before complex, unfamiliar, multi-step, high-risk, or domain-specific work. Use read_skill directly when the user names a skill. |
@@ -80,7 +79,6 @@ Skill writing is **TDD for process documentation**:
 | [`update-index`](skills/ai-dev-repo/update-index/SKILL.md) | How to maintain index.md catalog files in the ai-dev monorepo. Covers the read-before-write protocol, required columns, By Status regeneration, and staleness checks. Use when adding a project to an index, changing a project's status, or checking for stale entries. Does NOT create projects (load create-project) or write AGENTS.md files (load create-agents-md). |
 | [`verify-this`](skills/verify-this/SKILL.md) | Verify a claim with fresh local evidence. Use when asked to prove a fix, confirm behavior, compare before/after results, or produce a VERIFIED, NOT VERIFIED, or INCONCLUSIVE verdict. |
 | [`workflow-standards`](skills/dev-standards/workflow/SKILL.md) | Generic git and ops workflow standards — conventional commits, atomic PRs, env config validation, command timeout policy, multi-agent concurrency safety, dependency vetting. Use for git workflow, branching, PRs, or env/config setup in any repo. |
-| [`writing-plans`](skills/writing-plans/SKILL.md) | Write and maintain living implementation plans for multi-step work. Use when work has 3+ steps, touches multiple files or subsystems, may span sessions, or needs a handoff-quality vertical-slice implementation plan. |
 | [`xcode-makefiles`](skills/xcode-makefiles/SKILL.md) | Install strict Xcode Makefile tooling for iOS/macOS projects, including build/run/test scripts with AGENT_NAME-based per-agent isolation under build/. Use when a project needs reproducible local CLI builds without full app scaffolding. |
 | [`xcodebuildmcp`](skills/xcodebuildmcp/SKILL.md) | Official skill for XcodeBuildMCP (preferred). Use when doing iOS/macOS/watchOS/tvOS/visionOS work (build, test, run, debug, log, UI automation). |
 <!-- SKILLS_LIST_END -->
@@ -128,7 +126,7 @@ npx skills@latest add . -g --full-depth --agent codex opencode --skill '*' -y
 To install a subset:
 
 ```bash
-SKILLS_AGENTS=codex SKILLS_NAMES="prd writing-plans" ./register_skills.sh
+SKILLS_AGENTS=codex SKILLS_NAMES="prd git-workflow" ./register_skills.sh
 ```
 
 For update tracking, install from the public split repository after the ai-dev PR has merged and split publishing has completed:

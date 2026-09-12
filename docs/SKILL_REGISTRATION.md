@@ -51,7 +51,7 @@ npx skills@latest add . -g --full-depth --agent codex opencode --skill '*' -y
 To install a subset:
 
 ```bash
-SKILLS_AGENTS=codex SKILLS_NAMES="prd writing-plans" ./register_skills.sh
+SKILLS_AGENTS=codex SKILLS_NAMES="prd git-workflow" ./register_skills.sh
 ```
 
 To install from the public split repository and let `skills update` track future changes:
