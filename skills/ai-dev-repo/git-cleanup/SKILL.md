@@ -39,7 +39,7 @@ This skill exists because a normal Git cleanup pass in ai-dev can go wrong:
 - Linked worktrees blocked branch deletion.
 - Dirty `main` included durable docs/config plus generated build caches.
 - A giant mixed PR needed harvesting, not merging or blind deletion.
-- Entire checkpoint refs looked like cleanup candidates but are tool-owned.
+- Tool-owned checkpoint refs can look like cleanup candidates; verify their owner before deleting them.
 
 ## When To Use
 
@@ -82,7 +82,7 @@ Classify with this order:
 If `main` is dirty, separate durable work from generated output.
 
 - Preserve docs, source, config, launchd files, plans, and scripts on a cleanup branch.
-- Do not commit build caches, dependency folders, tool state, `.env`, `.entire`, `.opencode`, `.xcodebuildmcp`, or large archives.
+- Do not commit build caches, dependency folders, tool state, `.env`, `.opencode`, `.xcodebuildmcp`, or large archives.
 - If generated files already have a PR protecting them as tracked files, remove local untracked duplicates from `main` after verifying hashes.
 - For multi-area dirty state, use `cross/<description>`; otherwise use the narrowest valid scope.
 

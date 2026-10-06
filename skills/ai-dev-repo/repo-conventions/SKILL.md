@@ -110,7 +110,6 @@ Directories marked `Public (split)` in `index.md` auto-publish to GitHub on merg
 - `.env` — secrets must never be in git (use git-crypt for `.tfvars`)
 - Cache: `.ruff_cache/`, `.pytest_cache/`, `__pycache__/`, `node_modules/`
 - Build: `dist/`, `build/`, `.build/`
-- `.entire/` — Entire.dev session data
 - `.opencode/` — local OpenCode state
 - `.xcodebuildmcp/` — Xcode build MCP state
 - Large files (`.zip`, `.tar.gz`) — use `.gitignore`
