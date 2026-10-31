@@ -1,8 +1,8 @@
 ---
 name: git-workflow
-description: Git branching, commits, PRs, scope enforcement, multi-session safety, Alfred auto-review, and split publishing for the ai-dev monorepo. Use when creating branches, committing, pushing, creating PRs, or when working alongside other agents/sessions. Bridges with linear-workflow via `linear issue start` and `linear issue pr`. Does NOT cover Linear ticket lifecycle (load linear-workflow) or project creation (load create-project).
+description: Use when branching, committing, pushing, opening, independently reviewing, or merging PRs in the ai-dev monorepo; coordinating concurrent Git work; or handling split publishing. Covers scope enforcement, review evidence, and authorized merges. For Linear issue lifecycle, load linear-workflow; for project creation, load create-project.
 author: David Helmus
-version: 0.1.0
+version: 0.2.0
 source:
   type: self
   name: ai-dev
@@ -12,11 +12,12 @@ triggers:
   - "commit changes"
   - "open PR"
   - "pull request"
-  - "Alfred review"
+  - "independent review"
+  - "merge PR"
   - "split publishing"
 when_to_use:
   - "Creating or switching branches in the ai-dev monorepo."
-  - "Staging, committing, pushing, or opening a pull request."
+  - "Staging, committing, pushing, opening, reviewing, or merging a pull request."
   - "Coordinating multi-session Git work or checking existing PR feedback."
   - "Handling split-published project constraints."
 when_not_to_use:
@@ -26,7 +27,7 @@ when_not_to_use:
 
 ## The Golden Path
 
-Every unit of work follows this sequence: Discover → Branch → Work → Commit → Push & PR → Done.
+Every unit of work follows this sequence: Discover → Branch → Work → Commit → Push & PR → Independent Review → Merge → Done.
 
 ### 1. Discover — before creating a branch
 
@@ -56,7 +57,7 @@ git fetch origin main
 git checkout -b <scope>/<description> origin/main
 ```
 
-Always branch from `origin/main`, never local `main` — local may have unpushed commits from other sessions.
+Start new work from `origin/main`, never local `main` — local may have unpushed commits from other sessions. A dependent PR may branch from its prerequisite branch; record the dependency and follow the stack gate in Section 5.
 
 **Linear integration:** Check for a Linear issue covering this work. If none exists, create one (see linear-workflow skill). Then use `linear issue start DEV-123 --branch <scope>/DEV-123-description --from-ref origin/main` to create the branch, assign the issue, and transition to In Progress in one command.
 
@@ -107,20 +108,23 @@ gh pr create --title "type: description" --body "..."
 - One change per PR — multiple distinct changes → separate branches
 - Root `AGENTS.md` mandates the PR workflow — never push to main directly
 
-### 5. Auto-Review (Alfred)
+### 5. Independent Review & Merge
 
-Alfred is an AI bot on the homelab server that auto-reviews and auto-approves PRs.
+Every PR requires a reviewer subagent or a different chat that did not implement any part of the reviewed change. Changing roles within the implementing chat is self-review and cannot approve the PR.
 
-- You cannot merge. Alfred merges after approval.
-- PRs merge within minutes.
+1. **Review the final diff.** Give the independent reviewer the PR, exact head commit SHA, base ref and exact base commit SHA, relevant context and acceptance criteria, and validation evidence. The reviewer reads the actual PR diff and affected context, checks the evidence, and reports findings with a `PASS` or `BLOCKED` verdict.
+2. **Record the verdict.** Put the reviewer chat/subagent identity, exact reviewed head commit SHA, base ref and exact base commit SHA, findings and their resolution, validation evidence, and verdict in a durable PR body or comment. An author may relay the result, but must identify the actual reviewer. `PASS` requires no unresolved blocking findings; a private chat alone is not PR evidence.
+3. **Resolve and re-review.** Fix blocking findings and obtain independent re-review of the changed diff and affected context. Every new head commit SHA, base ref, base commit SHA, or changed diff needs a fresh independent verdict; an earlier approval does not transfer. Required checks must pass for the final relevant source and environment. Rerun affected gates; reuse evidence only when its relevant inputs are unchanged.
+4. **Merge the approved head.** Under the task's merge authorization, the implementation or orchestrator agent may merge after independent `PASS` and all required checks pass. Immediately before submitting the merge, re-read the open PR's head commit SHA, base ref and base commit SHA, review evidence, and checks. Compare both commit SHAs and the base ref with the recorded verdict; if any changed, obtain a fresh independent verdict before merging. Use the repository-supported merge method with a head guard such as `--match-head-commit <reviewed-head-sha>`. This guards the head, not the base. If the merge interface cannot atomically guard the base commit, recheck it immediately before submission and record that limitation; do not claim the base was atomically protected. Respect branch protection and required formal approvals; never use an admin override or bypass a failing gate. Report a blocked gate instead of merging.
 
-**"Branch is done" state machine:**
+**Stacked PRs:** Record dependencies and merge prerequisites first. Then fetch `origin/main`, retarget the dependent PR to `main`, and rebase if needed to remove already-merged commits or resolve conflicts. Inspect the resulting PR diff, run checks for the final source, and obtain a fresh independent verdict for its exact head commit SHA, base ref and base commit SHA before merging. Approval of a prerequisite does not approve its dependents.
 
-**After `gh pr create` — awaiting review:** Branch is locked for new work. Any additional work → new branch from `origin/main`. Alfred may merge within minutes, so commits pushed after PR creation risk landing on a closed PR.
+**Alfred:** Optional notifications or bot services do not replace the mandatory independent subagent/chat review and its PR evidence. Do not wait for Alfred once the authorized merge gate passes. Report incompatible automation settings separately; changing GitHub Actions or external bot configuration requires its own scoped task.
 
-**Alfred requests changes (ONE exception):** Push only the requested fixes to the same branch. Do not add unrelated changes. Alfred re-reviews automatically.
-
-**After Alfred merges — branch is permanently dead:** Never push to it again. GitHub carries full prior commit history — a new PR from the same branch includes already-merged commits in its diff.
+**Branch lifecycle:**
+- After PR creation, keep the branch limited to requested fixes and the dependency updates above. Put unrelated new work on a fresh branch from `origin/main`.
+- Before pushing a fix, confirm the PR is still open. Every new head returns to independent review.
+- After merge, never reuse or push to that branch. Start from current `origin/main` so the next PR contains only its own change.
 
 ### 6. Multi-Session Safety
 

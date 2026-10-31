@@ -268,7 +268,7 @@ The `linear-workflow` and `git-workflow` skills have complementary handoff point
 | **1. Discover** | `linear issue id` — auto-detect issue from current branch |
 | **2. Branch** | `linear issue start DEV-123 --branch <scope>/... --from-ref origin/main` + `linear issue update DEV-123 --state "In Progress"` — creates branch, assigns, then sets In Progress |
 | **4. Push & PR** | `linear issue pr DEV-123` — creates PR with Linear context pre-filled, auto-links in Linear |
-| **5. Alfred merges** | `linear issue update DEV-123 --state "Done"` — close issue after merge confirmed |
+| **5. Independent review and authorized merge** | `linear issue update DEV-123 --state "Done"` — close issue after merge confirmed |
 
 When both skills are loaded, prefer the `linear` commands at these handoff points — they keep Linear and git in sync with fewer steps.
 

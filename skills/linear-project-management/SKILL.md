@@ -30,7 +30,7 @@ when_not_to_use:
 
 Linear is the desk. Every work item is an issue, and the issue holds its decisions, progress and evidence. Chat and terminal output are not storage.
 
-In orchestrated delivery, this skill's merge and worktree rules override git-workflow's Alfred-merge and shared-directory rules.
+In orchestrated delivery, this skill assigns merging to the orchestrator and uses isolated worktrees. Follow git-workflow's mandatory independent review and merge gate.
 
 ## Roles
 

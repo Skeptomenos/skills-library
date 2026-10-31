@@ -79,8 +79,8 @@ Conventional commits: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `test:`
 
 ### Pull Requests
 - Always create a PR — never push to main directly.
-- One change per PR. Alfred (AI bot) auto-reviews.
-- Load skill `github-workflow` for full protocol.
+- One change per PR.
+- Load skill `git-workflow` for the mandatory independent review and authorized merge gate.
 
 ## Where Things Go
 
